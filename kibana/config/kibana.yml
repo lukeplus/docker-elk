@@ -10,4 +10,7 @@ xpack.monitoring.ui.container.elasticsearch.enabled: true
 ## X-Pack security credentials
 #
 elasticsearch.username: elastic
-elasticsearch.password: changeme
+elasticsearch.password: ODOO123
+
+# elastalert-kibana-plugin.serverHost: 192.168.100.133
+# elastalert-kibana-plugin.serverPort: 3030

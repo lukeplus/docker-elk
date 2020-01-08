@@ -1,0 +1,5 @@
+DATESTAMP_PYLOG %{YEAR}%{MONTHNUM2}%{MONTHDAY} %{HOUR}:%{MINUTE}:%{SECOND}
+
+JSONREQUEST \[I %{DATESTAMP_PYLOG:odoo_timestamp} %{PROG}:%{INT}\] \[%{WORD:slow_type}\] %{PATH:uri} User\(%{PROG:user_id}\) %{PROG:endpoint} %{PROG:model} %{PROG:method} SqlCount:.?%{INT:sql_count} SqlTime:.?%{NUMBER:sql_cost_time} time:.?%{NUMBER:cost_time}s
+HTTPREQUEST \[I %{DATESTAMP_PYLOG:odoo_timestamp} %{PROG}:%{INT}\] \[%{WORD:slow_type}\] %{PATH:uri} User\(%{PROG:user_id}\) %{PROG:endpoint} SqlCount:.?%{INT:sql_count} SqlTime:.?%{NUMBER:sql_cost_time} time:.?%{NUMBER:cost_time}s
+SQLLOG \[I %{DATESTAMP_PYLOG:odoo_timestamp} %{PROG}:%{INT}\] \[%{WORD:slow_type}\] %{GREEDYDATA:sql} time:%{NUMBER:sql_cost_time}s

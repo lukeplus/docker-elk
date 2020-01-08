@@ -4,10 +4,13 @@
 #
 cluster.name: "docker-cluster"
 network.host: 0.0.0.0
+node.name: node-1
+discovery.seed_hosts: ["127.0.0.1", "[::1]"]
+cluster.initial_master_nodes: ["node-1"] 
 
 ## X-Pack settings
 ## see https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-xpack.html
 #
-xpack.license.self_generated.type: trial
-xpack.security.enabled: true
+xpack.license.self_generated.type: basic
+xpack.security.enabled: false
 xpack.monitoring.collection.enabled: true

@@ -1,0 +1,49 @@
+{
+    "index_patterns": "erp-slow-*",
+    "settings": {
+        "index.refresh_interval": "5s"
+    },
+    "mappings": {
+         "_source": {
+           "enabled": true
+         },
+        "properties": {
+            "odoo_timestamp": {
+                "type": "keyword"
+            },
+            "slow_type": {
+                "type": "keyword"
+            },
+            "uri": {
+                "type": "keyword"
+            },
+            "sql": {
+                "type": "text"
+            },
+            "model": {
+                "type": "keyword"
+            },
+            "method": {
+                "type": "keyword"
+            },
+            "sql_count": {
+                "type": "integer",
+                "null_value": 0
+            },
+            "sql_cost_time": {
+                "type": "float",
+                "null_value": 0
+            },
+            "cost_time": {
+                "type": "float",
+                "null_value": 0
+            },
+            "user_id": {
+                "type": "keyword"
+            },
+            "endpoint": {
+                "type": "keyword"
+            }
+        }
+    }
+}
